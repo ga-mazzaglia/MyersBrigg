@@ -35,9 +35,10 @@ environments {
     production {
         dataSource {
             dbCreate = "update"
-            url = "jdbc:mysql://sql52.main-hosting.eu/u452321268_mybri"
-            username = "u452321268_mybri"
-            password = "mybri@123"
+//            url = "jdbc:mysql://93.188.160.43:3306/u452321268_mybri"
+//            username = "u452321268_mybri"
+//            password = "mybri@123"
+            url = "jdbc:h2:prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
             properties {
                // See http://grails.org/doc/latest/guide/conf.html#dataSource for documentation
                jmxEnabled = true
