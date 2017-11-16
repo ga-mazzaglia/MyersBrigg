@@ -61,6 +61,9 @@ class MainService {
                 PersonalityType personalityType1 = PersonalityType.findByName(peopleTeam.personality);
                 PersonalityType personalityType2 = PersonalityType.findByName(people.personality);
                 PersonalityTypeMatch match = this.getPersonalityMaths(personalityType1, personalityType2);
+                println "personalityType1: $personalityType1"
+                println "personalityType2: $personalityType2"
+                println "match: $match"
                 if (matchTmp) {
                     if (matchTmp.weight < match.weight) {
                         matchTmp = [team: team, people: people, weight: match.weight]
