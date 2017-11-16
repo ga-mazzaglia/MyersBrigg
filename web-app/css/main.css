@@ -1,0 +1,27 @@
+.header_take_test {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.item_question {
+    text-align: center;
+}
+
+.item_question .index {
+    float: left;
+    margin-top: -5px;
+    color: darkgrey;
+}
+
+.item_question .content {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.item_question button {
+    min-width: 100px;
+}
+
+.footer_take_test {
+    margin-bottom: 50px;
+}
