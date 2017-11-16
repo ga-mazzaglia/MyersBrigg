@@ -7,6 +7,7 @@ class MainService {
 
     def List<List<TeamDto>> analizeWithOptions(String peoples, Integer teamQuantity, Integer optimals) {
         List<List<TeamDto>> result = [];
+        Integer retry = 10;
         while (result.size() < 3) {
             List<TeamDto> tmp = analize(peoples, teamQuantity, optimals);
             Boolean apply = false;
@@ -22,6 +23,16 @@ class MainService {
             println "-----"
             println "Cantidad: " + result.size()
             println "-----"
+            if (result.size() == 1) {
+                retry--;
+                println "-----"
+                println "Retry: " + retry
+                println "-----"
+                if (retry == 0) {
+                    retry = 5;
+                    result = [];
+                }
+            }
         }
         return result.sort { -it*.weight };
     }
@@ -61,9 +72,6 @@ class MainService {
                 PersonalityType personalityType1 = PersonalityType.findByName(peopleTeam.personality);
                 PersonalityType personalityType2 = PersonalityType.findByName(people.personality);
                 PersonalityTypeMatch match = this.getPersonalityMaths(personalityType1, personalityType2);
-                println "personalityType1: $personalityType1"
-                println "personalityType2: $personalityType2"
-                println "match: $match"
                 if (matchTmp) {
                     if (matchTmp.weight < match.weight) {
                         matchTmp = [team: team, people: people, weight: match.weight]
@@ -78,7 +86,11 @@ class MainService {
                 matchTmp.team.weight += matchTmp.weight;
             }
         }
-        if (teams.find { it.weight == 1 } && peopleList.size() != 1) {
+        if (teams.find { it.weight == 1 } && peopleList.size() != 0) {
+            println "---"
+            println " - Recalculando: " + teams.find { it.weight == 1 }
+            println " - Size: " + peopleList.size()
+            println "---"
             teams = analize(peoples, teamQuantity, optimals)
         }
         return teams.sort { -it.weight };
@@ -96,7 +108,7 @@ class MainService {
             }
             lastRandom = rand;
             seeds << peopleList[rand];
-            sleep(10)
+            sleep(100)
         }
         return seeds;
     }

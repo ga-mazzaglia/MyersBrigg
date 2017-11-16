@@ -19,10 +19,10 @@ class MainController {
     }
 
     def analize() {
-        if (!loginService.getUserLogged()) {
-            redirect uri: "/login"
-            return
-        }
+//        if (!loginService.getUserLogged()) {
+//            redirect uri: "/login"
+//            return
+//        }
         List<List<TeamDto>> teams = mainService.analizeWithOptions(params.peoples, Integer.valueOf(params.teams), Integer.valueOf(params.optimals));
         //List<List<TeamDto>> teams = [mainService.analize(params.peoples, Integer.valueOf(params.teams), Integer.valueOf(params.optimals))];
         params.options = teams

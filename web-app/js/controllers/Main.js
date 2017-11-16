@@ -1,22 +1,11 @@
 var Main = {
 
-    _PEOPLES: [
-        {id: 1, name: "Test1", personality: "ENTJ"},
-        {id: 2, name: "Test2", personality: "ESFJ"},
-        {id: 3, name: "Test3", personality: "INFP"},
-        {id: 4, name: "Test4", personality: "INTP"},
-        {id: 5, name: "Test5", personality: "ISFJ"},
-        {id: 6, name: "Test6", personality: "ISTP"},
-        {id: 7, name: "Test7", personality: "ESTP"},
-        {id: 8, name: "Test8", personality: "ENTP"},
-        {id: 9, name: "Test9", personality: "INTJ"},
-    ],
+    _PEOPLES: [],
 
     init: function () {
         console.log("Main.init");
 
         Main.initBtns();
-
 
         Main._refreshPeoples();
     },
@@ -64,9 +53,11 @@ var Main = {
         }
         if (Main._PEOPLES.length == 0) {
             jQuery("#peoples").append('<div style="text-align: center; color: grey;">debe agregar personas</div>');
+            jQuery("#teamsContent").addClass("hidden");
         } else {
             Main.refreshComboGroupQuantity();
             Main.refreshComboOptimalGroupQuantity();
+            jQuery("#teamsContent").removeClass("hidden");
         }
     },
 
@@ -97,6 +88,10 @@ var Main = {
             peoples.push(Main._PEOPLES[people].name + "," + Main._PEOPLES[people].personality);
         }
 
+        if (peoples.length == 0) {
+            jQuery("#peopleName").focus();
+            return
+        }
         jQuery("#form_peoples").val(peoples.join("|"));
         jQuery("#form_teams").val(teams);
         jQuery("#form_optimal_teams").val(optimal);
@@ -105,6 +100,21 @@ var Main = {
             .addClass("btn-default")
             .html("analizando...")
         jQuery("form").submit();
+    },
+
+    testAddPeoples: function () {
+        Main._PEOPLES = [
+            {id: 1, name: "Test1", personality: "ENTJ"},
+            {id: 2, name: "Test2", personality: "ESFJ"},
+            {id: 3, name: "Test3", personality: "INFP"},
+            {id: 4, name: "Test4", personality: "INTP"},
+            {id: 5, name: "Test5", personality: "ISFJ"},
+            {id: 6, name: "Test6", personality: "ISTP"},
+            {id: 7, name: "Test7", personality: "ESTP"},
+            {id: 8, name: "Test8", personality: "ENTP"},
+            {id: 9, name: "Test9", personality: "INTJ"},
+        ];
+        Main.init();
     },
 }
 jQuery(document).ready(Main.init);
