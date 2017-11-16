@@ -15,7 +15,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Test Myer-Brigg</a>
+            <a class="navbar-brand" href="/">Equipo Óptimos</a>
         </div>
         <!-- /.navbar-header -->
 

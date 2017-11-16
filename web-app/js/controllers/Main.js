@@ -99,6 +99,8 @@ var Main = {
             .removeClass("btn-success")
             .addClass("btn-default")
             .html("analizando...")
+            .focus()
+            .attr("disabled", true)
         jQuery("form").submit();
     },
 
