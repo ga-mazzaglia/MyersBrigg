@@ -1,22 +1,14 @@
 <div class="navbar-default sidebar" role="navigation">
     <div class="sidebar-nav navbar-collapse">
         <ul class="nav" id="side-menu">
-            <li class="sidebar-search" style="display: none;">
-                <div class="input-group custom-search-form">
-                    <input type="text" class="form-control" placeholder="Search...">
-                    <span class="input-group-btn">
-                        <button class="btn btn-default" type="button">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </span>
-                </div>
-                <!-- /input-group -->
+            <li style="text-align: center; padding: 20px;" >
+                <img src="images/apple-icon-76x76.png" />
             </li>
             <li>
                 <a href="/" id="main_index"><i class="fa fa-dashboard fa-fw"></i> Inicio</a>
             </li>
             <li>
-                <a onclick="Main.testAddPeoples();Main._analize();" ><i class="fa fa-check fa-fw"></i> Test</a>
+                <a onclick="Main.testAddPeoples();Main._analize();" ><i class="fa fa-thermometer-half fa-fw"></i> Test</a>
             </li>
             <li>
                 <a href="http://cordobalab.com" ><img src="http://cordobalab.com/img/logo01.png" width="20"> CordobaLab.com</a>

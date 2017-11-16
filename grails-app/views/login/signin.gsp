@@ -12,8 +12,9 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4 col-md-offset-4">
-            <div align="center">
-                <h1>Myer-Brigg</h1>
+            <div align="center" style="margin-bottom: -40px;margin-top: 30px;">
+                <img src="images/apple-icon-76x76.png" />
+                <h1 style="margin: 0px;">Equipos Óptimos</h1>
             </div>
             <div class="login-panel panel panel-default">
                 <div class="panel-heading">
