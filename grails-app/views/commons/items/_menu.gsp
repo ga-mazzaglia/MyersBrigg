@@ -16,7 +16,7 @@
                 <a href="/" id="main_index"><i class="fa fa-dashboard fa-fw"></i> Inicio</a>
             </li>
             <li>
-                <a onclick="Main.testAddPeoples();Main._analize();" ><i class="fa fa-dashboard fa-fw"></i> Test</a>
+                <a onclick="Main.testAddPeoples();Main._analize();" ><i class="fa fa-check fa-fw"></i> Test</a>
             </li>
         </ul>
     </div>
