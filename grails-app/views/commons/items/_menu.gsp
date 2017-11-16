@@ -18,6 +18,9 @@
             <li>
                 <a onclick="Main.testAddPeoples();Main._analize();" ><i class="fa fa-check fa-fw"></i> Test</a>
             </li>
+            <li>
+                <a href="http://cordobalab.com" ><i class="fa fa-check fa-fw"></i> CordobaLab.com</a>
+            </li>
         </ul>
     </div>
     <!-- /.sidebar-collapse -->

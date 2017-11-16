@@ -42,6 +42,7 @@
                             <a onclick="jQuery('form').submit()" class="btn btn-lg btn-success btn-block">Entrar</a>
                         </fieldset>
                     </form>
+                    <div style="text-align: center;padding: 5px;color: grey">user: test - pass: test</div>
                 </div>
             </div>
         </div>
