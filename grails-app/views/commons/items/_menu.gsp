@@ -19,7 +19,7 @@
                 <a onclick="Main.testAddPeoples();Main._analize();" ><i class="fa fa-check fa-fw"></i> Test</a>
             </li>
             <li>
-                <a href="http://cordobalab.com" ><i class="fa fa-check fa-fw"></i> CordobaLab.com</a>
+                <a href="http://cordobalab.com" ><img src="http://cordobalab.com/img/logo01.png" width="20"> CordobaLab.com</a>
             </li>
         </ul>
     </div>
